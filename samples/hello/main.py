@@ -132,4 +132,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    main(args.project_id, args.instance_id, args.table)
+    main(args.'vf-grp-tst-landing', args.'bigtable-test', args.'input-logs')
