@@ -115,7 +115,7 @@ def main(project_id, instance_id, table_id):
 
     # [START bigtable_hw_delete_table]
     print("Deleting the {} table.".format(table_id))
-    table.delete()
+    # table.delete()
     # [END bigtable_hw_delete_table]
 
 
@@ -123,13 +123,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
-    parser.add_argument("project_id", help="Your Cloud Platform project ID.")
+    parser.add_argument("project_id", help="vf-grp-tst-landing")
     parser.add_argument(
-        "instance_id", help="ID of the Cloud Bigtable instance to connect to."
+        "instance_id", help="bigtable-test"
     )
     parser.add_argument(
-        "--table", help="Table to create and destroy.", default="Hello-Bigtable"
+        "--table", help="input-logs-gh", default="Hello-Bigtable"
     )
 
     args = parser.parse_args()
-    main(args.'vf-grp-tst-landing', args.'bigtable-test', args.'input-logs')
+    main(args.project_id, args.instance_id, args.table)
